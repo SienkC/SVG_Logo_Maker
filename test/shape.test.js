@@ -14,17 +14,22 @@ describe('Shape', () => {
         const circle = shape.getShape(testObj);
         expect(circle).toBeInstanceOf(shape.Circle);
     });
-    // // TODO: Write a test that verifies that BlogPost throws an error when the authorName provided does not only contain uppercase, lowercase, numbers, dashes, and underscores.
-    // it('should throw an error when the authorName provided does not only contain uppercase, lowercase, numbers, dashes, and underscores', () => {
-    //   // Arrange
-    //   // const str = 'aB12####?';
-    //   // Act - invoke the method /w Args
-    //   // const result = new BlogPost(str);
-    //   // the above DOESNOT work
-    //     const cb = () => new BlogPost('aB12####?');
-    
-    //     const err = new Error('Author must only contain letters, numbers, dashes, and underscores.');
-    //     //Assert
-    //     expect(cb).toThrow(err);
-    // });
+
+    it('should return a Triangle when Triangle is entered', () => {
+        const testObj = {text: 'test', textColor: 'test', shape: 'Triangle', shapeColor: 'test'};
+        const triangle = shape.getShape(testObj);
+        expect(triangle).toBeInstanceOf(shape.Triangle);
+    });
+
+    it('should return a Square when Square is entered', () => {
+        const testObj = {text: 'test', textColor: 'test', shape: 'Square', shapeColor: 'test'};
+        const square = shape.getShape(testObj);
+        expect(square).toBeInstanceOf(shape.Square);
+    });
+
+    it('should return the correct text when it is added to Square', () => {
+        const testObj = {text: `SVG`, textColor: 'test', shape: 'Square', shapeColor: 'test'};
+        const text = shape.getShape(testObj).text;
+        expect(text).toBe(`SVG`);
+    });
 });
