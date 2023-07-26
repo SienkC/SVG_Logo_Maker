@@ -80,4 +80,22 @@ describe('Shape', () => {
         const textColor = shape.getShape(testObj).textColor;
         expect(textColor).toBe(`orange`);
     });
+
+    it('should return the correct SVG string when parameters are added to Square', () => {
+        const testObj = {text: `SVG`, textColor: 'orange', shape: 'Square', shapeColor: 'black'};
+        const svgString = shape.getShape(testObj).svg;
+        expect(svgString).toBe(`<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200"><rect x="75" y="30" width="150" height="150" fill="black" stroke-width="5"/><text x="150" y="125" font-size="60" text-anchor="middle" fill="orange">SVG</text></svg>`);
+    });
+
+    it('should return the correct SVG string when parameters are added to Circle', () => {
+        const testObj = {text: `SVG`, textColor: 'orange', shape: 'Circle', shapeColor: 'black'};
+        const svgString = shape.getShape(testObj).svg;
+        expect(svgString).toBe(`<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200"><circle cx="150" cy="100" r="80" fill="black"/><text x="150" y="125" font-size="60" text-anchor="middle" fill="orange">SVG</text></svg>`);
+    });
+
+    it('should return the correct SVG string when parameters are added to Triangle', () => {
+        const testObj = {text: `SVG`, textColor: 'orange', shape: 'Triangle', shapeColor: 'black'};
+        const svgString = shape.getShape(testObj).svg;
+        expect(svgString).toBe(`<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200"><polygon points="150, 5 270, 170 30, 170" fill="black"/><text x="150" y="125" font-size="60" text-anchor="middle" fill="orange">SVG</text></svg>`);
+    });
 });
