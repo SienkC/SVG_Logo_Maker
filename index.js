@@ -42,9 +42,6 @@ function init() {
         }
     ])
     .then((response) => {
-        // test
-        console.log(response);
-
         // function to create logo
         logoCreator.generateLogo(response);
     });
