@@ -44,4 +44,22 @@ describe('Shape', () => {
         const text = shape.getShape(testObj).text;
         expect(text).toBe(`SVG`);
     });
+
+    it('should return the correct shape color when it is added to Square', () => {
+        const testObj = {text: `SVG`, textColor: 'test', shape: 'Square', shapeColor: 'black'};
+        const color = shape.getShape(testObj).color;
+        expect(color).toBe(`black`);
+    });
+
+    it('should return the correct shape color when it is added to Circle', () => {
+        const testObj = {text: `SVG`, textColor: 'test', shape: 'Circle', shapeColor: 'black'};
+        const color = shape.getShape(testObj).color;
+        expect(color).toBe(`black`);
+    });
+
+    it('should return the correct shape color when it is added to Triangle', () => {
+        const testObj = {text: `SVG`, textColor: 'test', shape: 'Triangle', shapeColor: 'black'};
+        const color = shape.getShape(testObj).color;
+        expect(color).toBe(`black`);
+    });
 });
