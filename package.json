@@ -1,0 +1,20 @@
+{
+  "name": "svg_logo_maker",
+  "version": "1.0.0",
+  "description": "A command-line application that takes in user input to generate a logo and save it as an SVG file",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.6.1",
+    "inquirer": "8.2.4"
+  }
+}
