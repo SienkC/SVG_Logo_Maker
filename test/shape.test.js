@@ -32,4 +32,16 @@ describe('Shape', () => {
         const text = shape.getShape(testObj).text;
         expect(text).toBe(`SVG`);
     });
+
+    it('should return the correct text when it is added to Circle', () => {
+        const testObj = {text: `SVG`, textColor: 'test', shape: 'Circle', shapeColor: 'test'};
+        const text = shape.getShape(testObj).text;
+        expect(text).toBe(`SVG`);
+    });
+
+    it('should return the correct text when it is added to Triangle', () => {
+        const testObj = {text: `SVG`, textColor: 'test', shape: 'Triangle', shapeColor: 'test'};
+        const text = shape.getShape(testObj).text;
+        expect(text).toBe(`SVG`);
+    });
 });
