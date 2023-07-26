@@ -1,6 +1,7 @@
 // require all necessary
 const inquirer = require('inquirer');
 const fs = require('fs');
+const logoCreator = require('./lib/logoCreator');
 
 // Prompt for user input
 function init() {
@@ -42,10 +43,10 @@ function init() {
         }
     ])
     .then((response) => {
-        // // Get README text content
-        // content = genMarkdwn.generateMarkdown(response);
+        // function to create logo
+        const logo = logoCreator.generateLogo(response);
 
-        // // Create the file using created content
+        // // Create the file using created logo
         // writeToFile('./result/README.md', content);
     });
 }
