@@ -27,6 +27,7 @@
   ## Usage <a id="usage"></a>
 
   To use the SVG Logo Maker, type "node index.js" in the terminal to bring up questions. Answer each question as it appears to detail how the generated logo should look. The text can be blank, but can not exceed 3 characters long. Once all questions have been answered, a logo.svg file will have been created using the information entered.
+  
 [SVG Logo Maker.webm](https://github.com/SienkC/SVG_Logo_Maker/assets/133715604/2ce8def7-2097-43ca-877a-17cfcee7ca71)
 
 
